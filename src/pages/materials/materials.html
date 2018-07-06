@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar color="yellowshade">
+    <ion-title>
+      Infrastructure & Materials
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="Option">
+      <ion-segment-button value="Infrastructure">
+        Infrastructure
+      </ion-segment-button>
+      <ion-segment-button value="Materials">
+        Materials
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+  <div [ngSwitch]="Option">
+    <ion-list *ngSwitchCase="'Infrastructure'">
+      <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/water.png">
+        </ion-thumbnail>
+        <i>
+        <h2>Drinking Water Facility</h2>
+        </i>
+        <button ion-button clear item-end (click)="goToDetails()">View</button>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/toilet.png">
+        </ion-thumbnail>
+        <i>
+        <h2>Toilets</h2>
+        </i>
+        <button ion-button clear item-end (click)="goToDetails1()" >View</button>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/light.png">
+        </ion-thumbnail>
+        <i>
+        <h2>Lighting</h2>
+        </i>
+        <button ion-button clear item-end (click)="goToDetails2()" >View</button>
+      </ion-item>
+
+    </ion-list>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Materials'">
+      <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/wall.png">
+        </ion-thumbnail>
+        <i>
+          <h2> Everest rapicon walls </h2>
+        </i>
+        <button ion-button clear item-end (click)="goToDetails3()">View</button>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/board.png">
+        </ion-thumbnail>
+        <i>
+         <h2>Everest cement fibre board</h2>
+       </i>
+        <button ion-button clear item-end (click)="goToDetails4()" >View</button>
+      </ion-item>
+    </ion-list>
+    </ion-list>
+  </div>
+  </ion-content>

@@ -1,0 +1,164 @@
+<ion-header>
+  <ion-navbar color="redshade">
+    <ion-title>
+    Housing Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="wrapper">
+            <ul>
+                <li>
+                    <input type="checkbox" checked>
+                    <i></i>
+                    <h6>
+                      <ion-icon color="redshade" name="construct"></ion-icon>
+                      Labour Housing
+                    </h6>
+                    <p><ion-card text-wrap>
+                    <ion-item>
+                      <ion-icon name="home" color="redshade" item-start></ion-icon>
+                        <p> Area Required for Dwelling Units:<p>
+                      <h2> {{housingarea()}} sq m</h2>
+                    </ion-item>
+                    <ion-item>
+                      <ion-icon name="logo-codepen" color="twitter" item-left></ion-icon>
+                      <p> Minimum Number of Dwelling
+                         Units :<p>
+                      <h2> {{ housinghouses() }}</h2>
+                    </ion-item>
+                    <ion-card-content>
+                        Average dimension of house recommended = 3.2m (length) x 2.4m (width)
+                    </ion-card-content>
+                  </ion-card>
+                 </p>
+                </li>
+                <li>
+                    <input type="checkbox" checked>
+                    <i></i>
+                    <h6>
+                    <ion-icon color="twitter" name="water"></ion-icon>
+                    Water
+                  </h6>
+                    <p>
+                      <ion-card text-wrap>
+                      <ion-item>
+                        <ion-icon name="water" color="primary" item-start></ion-icon>
+                        <p> Per day water demand:<p>
+                        <h2> {{ waterdemand() }} Litres</h2>
+                      </ion-item>
+                      <ion-item>
+                        <ion-icon name="radio-button-on" color="brownshade" item-left></ion-icon>
+                        <p> Minimum Water Tank Capacity:<p>
+                        <h2> {{ watertank() }} Litres</h2>
+                      </ion-item>
+                      <ion-item>
+                        <ion-icon name="arrow-dropright-circle" color="pinkish" item-left></ion-icon>
+                        <p> Minimum number of taps to be provided:<p>
+                        <h2> For Men : {{ watertapsm() }} </h2>
+                        <h2> For Women : {{ watertapsw() }} </h2>
+                      </ion-item>
+                      <ion-card-content>
+                          <p>Number of Litres per Person = 135 Litres<p>
+                      </ion-card-content>
+                    </ion-card>
+                  </p>
+                </li>
+                <li>
+                    <input type="checkbox" checked>
+                    <i></i>
+                    <h6>
+                    <ion-icon color="greenshade" name="medkit"></ion-icon>
+                    Sanitation
+                    </h6>
+                    <p>
+                      <ion-card text-wrap>
+                      <ion-item>
+                        <ion-icon name="woman" color="purpleshade" item-start></ion-icon><ion-icon name="man" color="purpleshade" item-start></ion-icon>
+                        <p> Number of Toilets :<p>
+                        <h2> For Men: {{ toiletsm() }} </h2>
+                        <h2> For Women: {{ toiletsw() }} </h2>
+                      </ion-item>
+                      <ion-item>
+                        <ion-icon name="arrow-forward" color="greenshade" item-left></ion-icon>
+                        <p> Area Required for Toilets : <p>
+                        <h2>   {{ toiletstot() }} sq m </h2>
+                      </ion-item>
+                      <ion-item>
+                        <ion-icon name="color-fill" color="primary" item-left></ion-icon>
+                        <p>  Number of Bathrooms :<p>
+                        <h2>  For Men: {{ bathm() }} </h2>
+                        <h2>  For Women: {{ bathw() }} </h2>
+                      </ion-item>
+                      <ion-item>
+                        <ion-icon name="arrow-forward" color="greenshade" item-left></ion-icon>
+                        <p>Area Required for Bathrooms : <p>
+                        <h2>  {{ areabath() }} sq m </h2>
+                      </ion-item>
+                      <ion-card-content>
+                          <p>Typical size of toilet recommended = 1m (breadth) x 1.2m (length)<p>
+                      </ion-card-content>
+                      <ion-card-content>
+                          <p>Typical size of bathroom recommended = 1.2m (breadth) x 1.2m (length)<p>
+                      </ion-card-content>
+                    </ion-card>
+                  </p>
+                </li>
+                <li>
+                  <input type="checkbox" checked>
+                  <i></i>
+                  <h6>
+                  <ion-icon color="yellowshade" name="restaurant"></ion-icon>
+                  Kitchen
+                 </h6>
+                 <p>
+                   <ion-card text-wrap>
+                   <ion-item>
+                     <ion-icon name="nutrition" color="redd" item-start></ion-icon>
+                     <p> Area Required for Common Kitchen: <p>
+                     <h2> {{ kitchen() }} sq m</h2>
+                   </ion-item>
+                    </ion-card>
+                 </p>
+                </li>
+                <li>
+                  <input type="checkbox" checked>
+                  <i></i>
+                  <h6>
+                  <ion-icon color="bluish" name="subway"></ion-icon>
+                  Transport
+                 </h6>
+                 <p>
+                   <ion-card text-wrap>
+                   <ion-item>
+                     <ion-icon name="bus" color="greenish" item-start></ion-icon>
+                      <h2>  {{ transport() }} </h2>
+                   </ion-item>
+                  </ion-card>
+                   </p>
+                </li>
+                <li>
+                  <input type="checkbox" checked>
+                  <i></i>
+                  <h6>
+                  <ion-icon color="sage" name="fastforward"></ion-icon>
+                  Total Built up Area Required:
+                 </h6>
+                 <p>
+                   <ion-card text-wrap>
+                   <ion-item>
+                     <ion-icon name="cube" color="twitter" item-start></ion-icon>
+                     <h2> {{ totalarea() }} sq m</h2>
+                   </ion-item>
+                    </ion-card>
+                 </p>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+</ion-content>

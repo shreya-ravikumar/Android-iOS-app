@@ -1,17 +1,50 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="purple">
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-row justify-content-center align-items-center>
+      <img src="assets/imgs/name.png">
+  </ion-row>
+  <ion-list>
+      <ion-item>
+          <ion-label color="primary" floating>Project Site Area (in sq m.)</ion-label>
+          <ion-input type="number" [(ngModel)]="sarea" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" floating>Project Built up Area (in sq m.)</ion-label>
+          <ion-input type="number" [(ngModel)]="area" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" floating>Labour Count (Men)</ion-label>
+          <ion-input type="number" [(ngModel)]="mencount" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" floating>Labour Count (Women)</ion-label>
+          <ion-input type="number" [(ngModel)]="womencount" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" floating>Number of Sub-Contractors</ion-label>
+          <ion-input type="number" [(ngModel)]="concount" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+       <ion-label color="primary" floating>State</ion-label>
+       <ion-select (ionChange)="setCityValues(sState)" [(ngModel)]="sState">
+            <ion-option [value]="sState" *ngFor = "let sState of states">{{sState.name}} </ion-option>
+      </ion-select>
+      </ion-item>
+      <ion-item *ngIf="selectedCities">
+      <ion-label color="primary" floating>City</ion-label>
+      <ion-select [(ngModel)]="sCity">
+        <ion-option [value]="sCity" *ngFor = "let sCity of selectedCities">{{sCity.name}}</ion-option>
+      </ion-select>
+      </ion-item>
+      </ion-list>
+      <ion-row>
+        <button ion-button full large color="purple" (click)="goTo(area,sarea,mencount,womencount,concount)" icon-start>
+           Housing Calculator
+        </button>
+      </ion-row>
 </ion-content>

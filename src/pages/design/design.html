@@ -1,0 +1,161 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Planning & Design</ion-title>
+  </ion-navbar>
+<ion-toolbar>
+  <ion-segment [(ngModel)]="Option">
+    <ion-segment-button value="Planning">
+      Planning
+    </ion-segment-button>
+    <ion-segment-button value="Design">
+      Design
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div [ngSwitch]="Option">
+  <ion-list *ngSwitchCase="'Planning'">
+    <ion-item text-wrap color='lightblue'>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/home.png">
+      </ion-thumbnail>
+      <h2>Facilities to be provided for less than 10 acres</h2>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+      <ion-icon name="home" item-start></ion-icon>
+      Houses
+      </ion-item>
+      <ion-item>
+      <ion-icon name="restaurant" item-start></ion-icon>
+      Common Kitchen
+      </ion-item>
+      <ion-item>
+      <ion-icon name="man" item-start></ion-icon><ion-icon name="woman" item-start></ion-icon>
+       Toilets , Bath
+      </ion-item>
+      <ion-item>
+      <ion-icon name="water" item-start></ion-icon>
+      Drinking Water
+      </ion-item>
+      <ion-item>
+      <ion-icon name="color-fill" item-start></ion-icon>
+      Washing Area
+      </ion-item>
+      <ion-item>
+      <ion-icon name="trash" item-start></ion-icon>
+      Waste Management
+      </ion-item>
+      <ion-item>
+      <ion-icon name="finger-print" item-start></ion-icon>
+      Security
+      </ion-item>
+      <ion-item>
+      <ion-icon name="bonfire" item-start></ion-icon>
+      Fire Safety
+      </ion-item>
+      <ion-item>
+      <ion-icon name="square-outline" item-start></ion-icon>
+      Material Storage Yard
+      </ion-item>
+      <ion-item>
+      <ion-icon name="medkit" item-start></ion-icon>
+      First Aid kit
+      </ion-item>
+      <ion-item>
+      <ion-icon name="subway" item-start></ion-icon>
+      Parking, Transport
+      </ion-item>
+      <ion-item>
+      <ion-icon name="basket" item-start></ion-icon>
+      Creche (>50 women labourers)
+      </ion-item>
+      <ion-item>
+      <ion-icon name="film" item-start></ion-icon>
+      Recreation
+      </ion-item>
+
+     </ion-list>
+     <ion-item text-wrap color='lightblue'>
+       <h2>For more than 10 acres, extra facilities that have to be included: </h2>
+     </ion-item>
+     <ion-list>
+       <ion-item>
+       <ion-icon name="list-box" item-start></ion-icon>
+       Labour Demonstration Area
+       </ion-item>
+       <ion-item>
+       <ion-icon name="briefcase" item-start></ion-icon>
+       Site Office
+       </ion-item>
+       <ion-item text-wrap color='lightblue'>
+        <p>Area Required for Facilities(for sites more than 10 acres): </p>
+        <p> 25 - 30 % of Total Built Up Area of Labour Camp</p>
+       </ion-item>
+     </ion-list>
+
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'Design'">
+    <ion-list>
+    <ion-item>
+      <ion-card>
+      <ion-item color="lightblue">
+        <h2>Design Planning Suggestions</h2>
+      </ion-item>
+        <ion-row justify-content-center align-items-center>
+        <ion-thumbnail padding>
+          <img src="assets/imgs/unit.png">
+        </ion-thumbnail>
+        </ion-row>
+        <ion-card-content text-wrap>
+          <ul padding>
+          <li>Single Person Occupancy(unmarried) Unit (~40%-60%)</li>
+          <li>Family Unit (~20-30%)</li>
+          <li>Contractor Unit (~5-10%)</li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+    <ion-item>
+      <ion-card>
+        <ion-item color="lightblue">
+        <h2>Design Architecture Suggestions</h2>
+      </ion-item>
+        <ion-row justify-content-center align-items-center>
+        <table class="rwd-table">
+          <tr>
+            <th> Type of Unit</th>
+            <th>Area Required</th>
+            <th>Interior Dimensions</th>
+            <th>Min Height</th>
+          </tr>
+          <tr>
+            <td data-th="Type of Unit">Single</td>
+            <td data-th="Area Required">36 sq m</td>
+            <td data-th="Interior Dimensions">6m x 6m</td>
+            <td data-th="Min Height">3.0m</td>
+          </tr>
+          <tr>
+            <td data-th="Type of Unit">Family</td>
+            <td data-th="Area Required">18-20 sq m</td>
+            <td data-th="Interior Dimensions">5m x 4m</td>
+            <td data-th="Min Height">2.4m</td>
+          </tr>
+          <tr>
+            <td data-th="Type of Unit">Supervisor</td>
+            <td data-th="Area Required">12 sq m</td>
+            <td data-th="Interior Dimensions">3m x 4m</td>
+            <td data-th="Min Height">2.4m</td>
+          </tr>
+        </table>
+      </ion-row>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  </ion-list>
+</div>
+</ion-content>
